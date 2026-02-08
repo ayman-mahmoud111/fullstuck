@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>For You — Happy Valentine's Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Cairo:wght@300;400;600&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="A personal Valentine message — crafted with love.">
+  </head>
+  <body>
+    <!-- Password Modal -->
+    <div id="passwordModal" class="password-modal">
+      <div class="password-modal-content">
+        <h1 class="password-title">أدخل كلمة المرور</h1>
+        <p class="password-subtitle">هذا المكان خاص بك 🔐</p>
+        <input 
+          type="password" 
+          id="passwordInput" 
+          class="password-input" 
+          placeholder="كلمة المرور"
+          onkeypress="if(event.key==='Enter') checkPassword()"
+        />
+        <button onclick="checkPassword()" class="btn password-btn">فتح</button>
+        <p id="errorMessage" class="error-message"></p>
+      </div>
+    </div>
+
+    <audio id="bg-music" loop preload="none">
+      <source src="img/Albumaty.Com_bhaa_sltan_maaya.mp3" type="audio/mpeg">
+    </audio>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="logo">لك</a>
+        <div class="nav-links">
+          <a href="#message">رسالة</a>
+          <a href="#gallery">صورنا</a>
+          <a href="#videos">فيديوهات</a>
+          <a href="#timeline">ذكريات</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">من يوم ما دخلتي حياتي
+وكل حاجة بقت أهدى… وأجمل… وليها معنى 💗</h1>
+          <p class="hero-sub"></p>ده مكان صغير معمول مخصوص علشان أقولك
+قد إيه بحبك وقد إيه وجودك فرق معايا.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#message">افتح قلبي</a>
+            <button id="playMusicHero" class="btn btn-secondary">♫ شغّل الموسيقى</button>
+          </div>
+        </div>
+          <div class="hero-decor" aria-hidden="true">
+            <!-- Subtle rose-gold decorative SVG for premium feel -->
+            <svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#EFD6D0" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#F7EEE9" stop-opacity="0.15" />
+                </linearGradient>
+              </defs>
+              <g opacity="0.55">
+                <ellipse cx="140" cy="90" rx="180" ry="80" fill="url(#g1)" />
+                <ellipse cx="520" cy="260" rx="200" ry="120" fill="url(#g1)" />
+              </g>
+            </svg>
+          </div>
+        <div class="hearts">
+          <span class="heart" style="--i:1"></span>
+          <span class="heart" style="--i:2"></span>
+          <span class="heart" style="--i:3"></span>
+        </div>
+      </section>
+
+      <section id="message" class="section message-section">
+        <div class="container">
+          <h2 class="section-title">رسالتي لك</h2>
+          <div class="letter">
+            <p>يمكن معرفش أرتّب كلامي،
+بس قلبي دايمًا عارف يقول اسمك من غير تفكير.
+
+وجودك في حياتي مش صدفة،
+ده أمان، وضحكة بتيجي في وقتها،
+وراحة عمري ما كنت متخيل إني أحسها.
+
+بحبك مش علشان حاجة واحدة،
+بحبك علشان كل حاجة فيك…
+علشان صوتك، ضحكتك، تفاصيلك الصغيرة
+اللي محدش بياخد باله منها غيري.</p>
+            <!-- <p>منذ لحظة لقائنا، ملأت حياتي نورًا ودفئًا. ضحكتك هي أعذب الأصوات وابتسامتك أجمل ما أرى. شكرًا لكونك شريكي وسندي وصديقي المقرّب.</p>
+            <p>في هذا اليوم أود أن أذكرك بمدى حبي العميق لك. كل ذكرى نصنعها معًا هي كنز أحتفظ به. أعدك أن أقدّرك وأدعمك وأحبك — اليوم ودائمًا.</p>
+            <p>إلى الأبد،</p> -->
+            <p class="signature">♥ ايمن</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="container">
+          <h2 class="section-title">ذكرياتنا…</h2>
+          <p class="muted">الحاجات اللي هتفضل جوا قلبي دايمًا 🤍</p>
+          <div class="gallery-grid">
+            <img data-src="img/اقتباسات رومنسية ستوريات حب حالات حب حالات واتس حب… (1).jpg" alt="img-اقتباس1" class="gallery-item lazy"/>
+            <img data-src="img/اقتباسات رومنسية ستوريات حب حالات حب حالات واتس حب….jpg" alt="img-اقتباس2" class="gallery-item lazy"/>
+            <img data-src="img/%23fyp%20%23love%20%23romantic%20%23holdinghands.jpg" alt="img1" class="gallery-item lazy"/>
+            <img data-src="img/Hugs%20%26%20Love.jpg" alt="img2" class="gallery-item lazy"/>
+            <img data-src="img/one%20love%20one%20life.jpg" alt="img3" class="gallery-item lazy"/>
+            <img data-src="img/Push%20yourself%2C%20because%20no%20one%20else%20will_.jpg" alt="img4" class="gallery-item lazy"/>
+            <!-- <img data-src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop" alt="معًا 1" class="gallery-item lazy"/> -->
+            <!-- <img data-src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="معًا 2" class="gallery-item lazy"/>
+            <img data-src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop" alt="معًا 3" class="gallery-item lazy"/>
+            <img data-src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=800&auto=format&fit=crop" alt="معًا 4" class="gallery-item lazy"/>
+            <img data-src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1200&auto=format&fit=crop" alt="معًا 5" class="gallery-item lazy"/>
+            <img data-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop" alt="معًا 6" class="gallery-item lazy"/> -->
+            <!-- Pinterest image provided by user; opens pin if direct embed blocked -->
+
+        </div>
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+          <button class="close" aria-label="إغلاق">✕</button>
+          <img class="lightbox-img" src="" alt="صورة مكبرة">
+        </div>
+      </section>
+
+      <section id="videos" class="section video-section">
+        <div class="container">
+          <h2 class="section-title">فيديوهات وذكريات</h2>
+          <div class="videos-grid">
+            <!-- <div class="video-card">
+              <div style="position:relative;width:100%;padding-bottom:56.25%;">
+                <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;" src="https://www.youtube.com/embed/HVgy8Ge0GJQ?rel=0&modestbranding=1" title="ذكرى" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="caption">فيديو تذكاري.</p>
+            </div> -->
+            <!-- <div class="video-card">
+              <video controls preload="metadata" poster="https://via.placeholder.com/640x480/d4a4a4/7a6168?text=\u0644\u062d\u0638\u0629\u062c\u0645\u064a\u0644\u0629" style="border-radius:8px;width:100%;">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+              </video>
+              <p class="caption">لحظة جميلة معك.</p>
+            </div> -->
+            <div class="video-card">
+              <video controls preload="metadata" style="border-radius:8px;width:100%;">
+                <source src="img/WhatsApp Video 2026-02-08 at 11.17.44 AM.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+              </video>
+              <p class="caption">لحظة جميلة.</p>
+            </div>
+            <div class="video-card">
+              <video controls preload="metadata" style="border-radius:8px;width:100%;">
+                <source src="img/WhatsApp Video 2026-02-08 at 11.21.10 AM.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+              </video>
+              <p class="caption">لحظة جميلة.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <h2 class="section-title">ذكريات مميزة</h2>
+          <ol class="timeline">
+            <li>
+              <strong>💗 اليوم اللي عرفتك فيه</strong>
+              <span class="time">12 يناير، 2025</span>
+              <p>اليوم ده الدنيا هديت،
+ومن أول كلام حسّيت براحة غريبة.
+مكنتش عارف ليه…
+بس كنت مبسوط.</p>
+            </li>
+            <li>
+              <strong>أول رحلة معًا</strong>
+              <span class="time">5 يونيو، 2025</span>
+              <p>بقينا نفهم بعض من غير كلام،
+والوجود بقى أسهل.
+هنا فهمت إن اللي بينا حقيقي.</p>
+            </li>
+            <li>
+              <strong>❤️ يوم عيد الحب</strong>
+              <span class="time">1 فبراير، 2026</span>
+              <p>عيد الحب مش يوم في السنة،
+ده إحساس.
+
+بس النهارده حابب أقولك
+إنك أجمل اختيار اخترته من غير ما أفكر.
+
+بحبك بهدوء،
+بحبك بصدق،
+وبحبك علشان إنتي زي ما إنتي…
+
+وكل سنة وإنتي الحاجة الحلوة اللي حصلت في حياتي.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="final" class="section final-section">
+        <div class="container final-message">
+          <h2 class="section-title">إلى الأبد</h2>
+          <p class="big">النهاية دي مش نهاية حكايتنا
+دي مجرد صفحة من كتاب لسه طويل 💕</p>
+          <div class="actions">
+            <button id="playMusic" class="btn subtle">تشغيل الموسيقى</button>
+            <a class="btn" href="#gallery">عرض الصور</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>مصنوع بكل حب لك — عيد حب سعيد</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
